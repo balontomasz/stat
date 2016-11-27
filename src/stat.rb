@@ -1,5 +1,5 @@
 class Stat
-  def run
+  def perform
     countries = CountriesFetcher.new(ARGV).perform
     compared_data = Comparator.new(countries).perform
     Printer.new.perform(compared_data)
