@@ -9,8 +9,7 @@ class Stat
     countries = CountriesFetcher.new.perform
     countries = countries.select { |c| c.name == name_a || c.name == name_b }
     compared_data = Comparator.new(countries).perform
-    binding.pry
-
+    Printer.new.perform(compared_data)
   end
 
   private
