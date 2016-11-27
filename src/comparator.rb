@@ -8,7 +8,8 @@ class Comparator
       object_1: object_1,
       object_2: object_2,
       diff: {
-        rate: rate
+        rate: rate,
+        ratio: ratio
       }
     }
   end
@@ -19,5 +20,9 @@ class Comparator
 
   def rate
     object_1.rate - object_2.rate
+  end
+
+  def ratio
+    (object_1.rate.to_f / object_2.rate.to_f).round(2)
   end
 end

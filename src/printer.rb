@@ -10,6 +10,8 @@ class Printer
     print_diff(diff)
   end
 
+  private
+
   def print_header
     puts "Oto moje perfekcyjne zajebiste dane ktore przedstawiaj sie nastepujaco:"
   end
@@ -20,6 +22,7 @@ class Printer
   end
 
   def print_diff(diff)
-    puts "dif jest taki: #{diff.fetch(:rate)}"
+    puts "Różnica pomiędzy PKB per capita wynosi: #{diff.fetch(:rate)}"
+    puts "Stosunek PKB per capita wynosi: #{diff.fetch(:ratio)}"
   end
 end
